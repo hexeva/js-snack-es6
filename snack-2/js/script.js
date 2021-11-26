@@ -88,7 +88,7 @@ const htmlElement =`
 <h2>Vincitore : ${footballClub.nome}</h2>
 <h2>Punti : ${footballClub.puntiFatti}</h2>
 `;
-console.log(htmlElement);
+
 
 
     // popolo il nuovo elemnto nel container
