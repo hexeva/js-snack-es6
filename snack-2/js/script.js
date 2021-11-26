@@ -63,11 +63,11 @@ function getRndInteger(min, max) {
 
 
 // creo un ciclo for per scorrere tutto l'array
-let footballClub = footballTeams[0];
+// let footballClub = footballTeams[0];
 
 for(let i = 0; i < footballTeams.length; i++){
     let singleTeam = footballTeams[i];
-    singleTeam = footballClub;
+
     
 // genero a ogni ciclo un numero random diverso
     let randomPoints = getRndInteger(0,100);
@@ -78,25 +78,33 @@ for(let i = 0; i < footballTeams.length; i++){
     singleTeam.puntiFatti = randomPoints;
     console.log(singleTeam);
 
-
 }
+// Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 
-// seleziono elemnto html
-const containerHtml = document.querySelector('.text-container');
+const newArray =[];
 
-const htmlElement =`
-<h2>Vincitore : ${footballClub.nome}</h2>
-<h2>Punti : ${footballClub.puntiFatti}</h2>
-`;
+for (let i = 0; i < footballTeams.length;i++){
+   let singleTeam = footballTeams[i];
+   const {nome,falliSubiti} = singleTeam;
+   console.log(nome,falliSubiti);
+
+   const newTeam={
+       nome,
+       falliSubiti
+   }
+   console.log(newTeam);
+   newArray.push(newTeam);
+};
+
+console.log(newArray);
 
 
 
-    // popolo il nuovo elemnto nel container
-    containerHtml.innerHTML += htmlElement;
+
+
 
     
 
-// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 
 
