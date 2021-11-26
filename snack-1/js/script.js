@@ -19,7 +19,7 @@ const bikesArray = [
 
     {
         nome: 'specialized',
-        pesoKg: 1.3
+        pesoKg: 0.8
     },
 
     {
@@ -45,7 +45,7 @@ const bikesArray = [
 // Stampare a schermo la bici con peso minore utilizzando destructuring e template literal nel DOM
 
 // creo una variabile assumendo che la prima dell'indice sia quella con peso minore ----> 
-    // se il peso di thisBikes < bikeWeight 
+    // se il peso di thisBikes < lessBikeWeight 
     // allora bikeWeight = thisBikes
 
 let lessWeightBike = bikesArray[0];
@@ -65,9 +65,20 @@ for(let i = 0; i < bikesArray.length;i++){
     if(thisBikes.pesoKg < lessWeightBike.pesoKg){
         lessWeightBike = thisBikes;
     }
-    console.log(lessWeightBike);
-    
-    
-}
-
     // console.log(lessWeightBike);
+    
+    
+};
+    
+     console.log(lessWeightBike);
+
+     const htmlContainer = document.querySelector('.text-container');
+     console.log(htmlContainer);
+
+     let htmlContent = `
+     <h2>nome: [nome]</h2>
+     <h3>peso: [peso]</h3>
+     `;
+     console.log(htmlContent);
+
+     htmlContainer.innerHTML = htmlContent;
