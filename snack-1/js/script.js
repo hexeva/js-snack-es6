@@ -72,13 +72,23 @@ for(let i = 0; i < bikesArray.length;i++){
     
      console.log(lessWeightBike);
 
+    //  CREO I NNUOVI ELEMENTI HTML E LI POPOLO (versione senza destrutturazione)
      const htmlContainer = document.querySelector('.text-container');
-     console.log(htmlContainer);
+    //  console.log(htmlContainer);
 
-     let htmlContent = `
-     <h2>nome: [nome]</h2>
-     <h3>peso: [peso]</h3>
-     `;
-     console.log(htmlContent);
+    //  let htmlContent = `
+    //  <h2>nome: [${lessWeightBike.nome}]</h2>
+    //  <h3>peso: [${lessWeightBike.pesoKg}]</h3>
+    //  `;
+    
+    // VERSIONE CON DESTRUTTURAZIONE
+    const {nome,pesoKg}=lessWeightBike;
 
-     htmlContainer.innerHTML = htmlContent;
+      let htmlContent = `
+       <h2>nome: [${nome}]</h2>
+       <h3>peso: [${pesoKg}]</h3>
+      `;
+
+     
+
+     htmlContainer.innerHTML += htmlContent;
