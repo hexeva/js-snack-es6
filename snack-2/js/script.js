@@ -59,14 +59,16 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
 
-//   salvo la funzione in una variabile
 
 
 
 // creo un ciclo for per scorrere tutto l'array
+let footballClub = footballTeams[0];
 
 for(let i = 0; i < footballTeams.length; i++){
-    const singleTeam = footballTeams[i];
+    let singleTeam = footballTeams[i];
+    singleTeam = footballClub;
+    
 // genero a ogni ciclo un numero random diverso
     let randomPoints = getRndInteger(0,100);
     let randomFouls = getRndInteger(0,50);
@@ -75,5 +77,26 @@ for(let i = 0; i < footballTeams.length; i++){
     singleTeam.falliSubiti = randomFouls;
     singleTeam.puntiFatti = randomPoints;
     console.log(singleTeam);
+
+
 }
+
+// seleziono elemnto html
+const containerHtml = document.querySelector('.text-container');
+
+const htmlElement =`
+<h2>Vincitore : ${footballClub.nome}</h2>
+<h2>Punti : ${footballClub.puntiFatti}</h2>
+`;
+console.log(htmlElement);
+
+
+    // popolo il nuovo elemnto nel container
+    containerHtml.innerHTML += htmlElement;
+
+    
+
+// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+
 
