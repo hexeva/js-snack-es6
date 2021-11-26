@@ -79,7 +79,8 @@ for(let i = 0; i < footballTeams.length; i++){
     console.log(singleTeam);
 
 }
-// Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+
+// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 const newArray =[];
 
